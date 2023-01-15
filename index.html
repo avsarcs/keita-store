@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./styles/style.css" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keita Store</title>
+</head>
+
+<body>
+
+  <!-- Below is overlay that is toggled on or off, has no effect on page structure. -->
+  <div class="overlay-panel">
+    <div class="form-wrapper">
+
+    <button type="button" class="op-button form-close-btn" onclick="toggleOverlay()">Close</button>
+
+    <form id="product-form" onsubmit="newProduct()">
+      Product Title: <br>     
+      <input id="p-title" type="text" maxlength="56" value="" required> <br> <br> <br>
+      Product Price: <br>
+      <input id="p-price" type="number" step=".01" min="0" max="999999" value="" style="width: 5em" required>$ <br> <br> <br>
+      Product Thumbnail: <br>
+      <input id="p-thumbnail" value="" type="file"> <br> <br> <br> <br> <br> <br> <br>
+      <button type="submit" class="op-button" onsubmit="toggleOverlay()">List Your Product!</button>
+  </form>
+
+    </div>
+  </div>
+
+  <script src="./scripts/script.js"></script>
+
+    <div class="container">
+
+      <div class="banner">
+      <div class="banner-left" ><a href="./index.html">Keita Store</a></div>
+      <div class="banner-right"><img id="cart-image" src="./images/shoppingCart.png" style="max-height: 80%;" alt="shopping cart"> </div>
+
+      </div>
+
+      <div id="operations">
+        <button type="button" class="op-button" onclick="toggleOverlay()">New Listing</button>
+      </div>
+
+      <div class="listing-panel" >
+
+      <div class="listing">
+        <img class="product-thumbnail" src="./images/product-thumbnails/olivertwist.jpg" alt="thumbnail" >
+        <div class="product-title">Charles Dickens, Oliver Twist</div>
+        <div class="product-price"> 4.29$ </div>
+      </div>
+
+      </div>
+
+      <div class="footer" >
+        Keita Store. All Rights Reserved © 2022
+      </div>
+
+    </div>
+
+</body>
+</html>
